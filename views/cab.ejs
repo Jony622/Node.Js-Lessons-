@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>cab</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    <div class="main">
+    <div class="left">
+    <a href="/reg">reg</a>
+    <a href="/auth">auth</a>
+    <h1>Personal office</h1>
+    <form
+      action="/cab?login=<%=info.login%>"
+      method="post"
+      enctype="multipart/form-data">
+      <label for="file">Input file</label><br />
+      <input required type="file" id="file" name="file" /><br /><br />
+      <label>Input status</label><br />
+      <input type="text" name="status" /><br /><br />
+      <input type="submit" value="Submit" />
+    </form>
+    <p style="color: red"><%= error %></p>
+    </div>
+    <div class="right">
+        <% if(info.imageName.length > 0){ %>
+            <img src="/loadimg/<%= info.imageName %>" />
+        <% } else { %>
+             <p>"Place for photo"</p> 
+        <% } %>
+    <p class="monke">Status: <%= info.status %></p>
+    </div>
+    </div>
+  </body>
+</html>
