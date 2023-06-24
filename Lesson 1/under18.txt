@@ -1,0 +1,1 @@
+[{"userName":"Sasha","email":"sobaka@gmail.com","userBirth":"2009-03-21","drinks":["Водка","Спірт","Топліво"]},{"userName":"Vova","email":"sada@gmail.com","userBirth":"2018-02-23","drinks":["Пиво","Вино"]},{"userName":"Soraka","email":"noWards@gmail.com","userBirth":"2015-01-01","drinks":"Вино"}]

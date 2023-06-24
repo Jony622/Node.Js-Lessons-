@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Регистрация</title>
+    <meta charset="utf-8" />
+    <!-- http-equiv="Refresh" content="5" -->
+  </head>
+
+  <body>
+    <a href="/home">Home</a>
+    <a href="/about">Info</a>
+    <a href="/users">Users</a>
+    <h1>Введіть дані</h1>
+    <form action="form" method="post">
+      <label>Ім'я</label><br />
+      <input required type="text" name="userName" /><br /><br />
+      <label>Електронна пошта</label><br />
+      <input required type="email" name="email" /><br /><br />
+      <label>Дата народження</label><br />
+      <input required type="date" name="userBirth" /><br /><br />
+      <label>Улюблені напої</label><br />
+      <select multiple name="drinks" size="4">
+        <option value="Пиво">Пиво</option>
+        <option value="Вино">Вино</option>
+        <option value="Водка">Водка</option>
+        <option value="Спірт">Спірт</option>
+        <option value="Топліво">Топліво для літака</option>
+      </select>
+      <input type="submit" value="Отправить" />
+    </form>
+  </body>
+</html>
