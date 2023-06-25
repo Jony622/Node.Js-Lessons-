@@ -1,2 +1,2 @@
-# Homeworks🚑
-Спаси і сохрани✝
+# Homeworks
+No pain - No gain
