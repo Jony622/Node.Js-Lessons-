@@ -55,7 +55,6 @@ app.get("/users", (req, res) => {
     </table>`
   );
 
-  // res.sendFile(__dirname + "/users.html");
 });
 
 app.get("/form", (req, res) => {
@@ -84,20 +83,9 @@ app.post("/form", (req, res) => {
     req.body.email != 0 &&
     req.body.favDrinks != 0
   ) {
-    // userListUpper.push(req.body);
-    // fs.writeFileSync("./upper18.txt", JSON.stringify(userListUpper));
   } else if (age < 18 && req.body.userName != 0 && req.body.email != 0) {
     userListUnder.push(req.body);
     fs.writeFileSync("./under18.txt", JSON.stringify(userListUnder));
   }
   res.send('+ <a href="/users">Натисни сюда  </a>');
 });
-
-//document.querySelector('button').onclick = myClick;
-//myClick()=>{let a = document.querySelector('.')}
-
-// userInfo.useName.push(req.body.userName);
-//let userInfo = req.body.userName - req.body.email- req.body.userBirth- req.body.favDrinks;
-
-// response.send("<h1>Информация</h1><p>id=" + id +"</p><p>name=" + userName + "</p>");
-// });

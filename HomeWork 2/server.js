@@ -67,8 +67,7 @@ app.post(
     console.log(req.body);
     console.log(req.files);
     console.log(req.query);
-    //   console.log(info);
-    //   const path = "./loadimg/" +req.body.status+'.'+ req.files.file.name.split('.').pop();
+
     const path =
       "./public/loadimg/" +
       req.query.login +
@@ -96,7 +95,4 @@ app.post(
     }
   }
 
-  // userData.status.push(req.body.status);
-  // userData.imageName.push(req.files.file.name.split(".").pop());
-  // fs.writeFileSync("./users.txt", JSON.stringify(userData));
 );

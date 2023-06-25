@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Регистрация</title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <h1>Список користувачів</h1>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Password</th>
+        </tr>
+        <% for (let i = 0; i < userList.length; i++) { %>
+            <tr>
+                <td><%= userList[i].name %></td>
+                <td><%= userList[i].email %></td>
+                <td><%= userList[i].password %></td>
+            </tr>
+            
+        <% } %>
+    </table>
+    <h1>Список користувачів</h1>
+    <ul>
+        <% for (let i = 0; i < userList.length; i++) {%>
+            <li>
+                Name:<%= userList[i].name %> 
+                Email:<%= userList[i].email %> 
+                Password: <%= userList[i].password %>
+            </li>
+        <% } %>
+        
+    </ul>
+</body>
+</html>
