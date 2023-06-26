@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>auth</title>
+    <title>edit</title>
     <meta charset="utf-8" />
   </head>
   <body>
-    <h1>Create</h1>
-    <form action="/" method="post">
+    <h1>Edit</h1>
+    <form action="/edit?id=<%=edPers._id%>" method="post">
       <label>Username</label><br />
-      <input  type="text" name="username" /><br /><br />
+      <input required type="text" name="username" value="<%= edPers.username%>" /><br /><br />
       <label>Password</label><br />
-      <input  type="text" name="password" /><br /><br />
+      <input required type="text" name="password" value="<%= edPers.password%>" /><br /><br />
       <label>Email</label><br />
-      <input  type="number" name="email" /><br /><br />
+      <input required type="email" name="email" value="<%= edPers.email%>" /><br /><br />
       <label>Phone number</label><br />
-      <input  type="number" name="phoneNumber" /><br /><br />
+      <input required type="number" name="phoneNumber" value="<%= edPers.phoneNumber%>" /><br /><br />
       <input type="submit" value="Submit" />
     </form>
   <p></p>
     <a href="/"><button> Create </button></a>
     <a href="/users"><button> Read </button></a>
+    
   </body>
   <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
   <script src="/js/script.js"></script>

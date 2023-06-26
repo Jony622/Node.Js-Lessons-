@@ -1,5 +1,5 @@
 $("#searchBtn").click(function(){
-    $.post("/admin/search",
+    $.post("/delete?id=userBase[i]._id",
     {
       name: $("#search").val(),
     },

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Read</title>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <h1>Users list</h1>
+    <form action="/users" method="post">
+      <label>Username</label><br />
+      <input type="text" name="username" /><br /><br />
+      <label>Password</label><br />
+      <input type="text" name="password" /><br /><br />
+      <label>Email</label><br/>
+      <input type="email" name="email" /><br /><br />
+      <label>Phone number</label><br />
+      <input type="number" name="phoneNumber" /><br /><br />
+      <input type="submit" value="Submit" />
+</form>
+          <h1>Database</h1>     
+      <table border="1">
+              <tr>
+            <th>Name</th>
+            <th>Password</th>
+            <th>Email</th>
+            <th>Phone number</th>
+            <th>Data</th>
+        </tr>
+        <% for (let i = 0; userBase.length > i; i++) { %>
+            <tr>
+        <td><%= userBase[i].username %></td>
+        <td><%= userBase[i].password %></td>
+        <td><%= userBase[i].email %></td>
+        <td><%= userBase[i].phoneNumber %></td>
+        <td><%= userBase[i].createdAt %></td>
+        <td><a href="/edit?id=<%=userBase[i]._id%>"><button type="submit" value="Submit"> Edit </button></a></td>
+           
+        <td> <form onSubmit="return confirm('Do you want to submit?')" action="/delete?id=<%=userBase[i]._id%>" method="post"> <button type="confirm" value="Submit"> Delete </button></form></td>
+                
+            </tr>
+        <% } %>
+    </table>
+ <br>
+    <a href="/"><button> Create </button></a>
+    <a href="/users"><button> Read </button></a>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+  <script src="/js/script.js"></script>
+</html>
