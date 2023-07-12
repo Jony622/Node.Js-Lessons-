@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Read</title>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <h1>Users list</h1>
+    <form action="/" method="post">
+</form>    
+      <table border="1">
+              <tr>
+            <th>Discord id</th>
+            <th>Todo</th>
+            <th>Role id for Generals todo</th>
+            <th>Created at</th>
+        </tr>
+        <% for (let i = 0; userBase.length > i; i++) { %>
+            <tr>
+        <td><%= userBase[i].id %></td>
+        <td><%= userBase[i].todo %></td>
+        <td><%= userBase[i].role %></td>
+        <td><%= userBase[i].createdAt %></td>
+        <td>
+        </td> 
+            </tr>
+        <% } %>
+    </table>
+ <br>
+  </body>
+</html>

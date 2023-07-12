@@ -23,9 +23,13 @@
         <td><%= userBase[i].email %></td>
         <td><%= userBase[i].phoneNumber %></td>
         <td><%= userBase[i].createdAt %></td>
-        <td><a href="/edit?id=<%=userBase[i]._id%>"><button type="submit" value="Submit"> Edit </button></a></td>
-           
-        <td> <form onSubmit="return confirm('Do you want to submit?')" action="/delete?id=<%=userBase[i]._id%>" method="post"> <button type="confirm" value="Submit"> Delete </button></form></td>
+        <td>
+          <a href="/edit?id=<%=userBase[i]._id%>"><button type="submit" value="Submit"> Edit </button></a>
+        </td>
+        <td> 
+          <form onSubmit="return confirm('Do you want to submit?')" action="/delete?id=<%=userBase[i]._id%>" 
+          method="post"> <button type="confirm" value="Submit"> Delete </button></form>
+        </td>
                 
             </tr>
         <% } %>
